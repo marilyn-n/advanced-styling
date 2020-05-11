@@ -29,5 +29,57 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0% ,100% 75vh, 0% 100%)
+  clip-path: polygon(0 0, 100% 0% ,100% 75vh, 0% 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+}
+
+.logo {
+  height: 48px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading-primary {
+  letter-spacing: 1.75rem;
+  text-align: center;
+  line-height: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.heading-primary-sub {
+  letter-spacing: .75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.discover-btn {
+  width: auto;
+  height: 2rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: rgb(117, 114, 114);
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: .75rem;
 }
