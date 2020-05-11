@@ -65,21 +65,113 @@ body {
   display: block;
   font-size: 3rem;
   font-weight: 500;
+  /* animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; */
+  animation: moveInLeft 2s ease-out;
 }
 
 .heading-primary-sub {
+  display: block;
   letter-spacing: .75rem;
   font-size: 1.25rem;
   font-weight: 400;
+  animation: moveInRight 2s ease-out;
 }
 
 .discover-btn {
+  display: inline-block;
   width: auto;
-  height: 2rem;
-  padding: 1rem 2rem;
-  background: white;
-  color: rgb(117, 114, 114);
+  padding: .75rem 1.75rem;
   border-radius: 25px;
   text-decoration: none;
   font-size: .75rem;
+  transition: all .2s;
+  position: relative;
+}
+
+.discover-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0,0.2);
+}
+
+.discover-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0,0.2);
+}
+
+.btn-white {
+  background: white;
+  color:#777;
+}
+
+.discover-btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: white;
+}
+
+.discover-btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBotton .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  80% {
+    transform: translateX(5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  80% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBotton {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
