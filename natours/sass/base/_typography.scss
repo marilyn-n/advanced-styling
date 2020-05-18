@@ -1,0 +1,23 @@
+.heading-primary {
+  letter-spacing: 1.75rem;
+  text-align: center;
+  line-height: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+
+  &--main {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    animation: moveInLeft 2s ease-out;
+  }
+
+  &--sub {
+    display: block;
+    letter-spacing: .75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    animation: moveInRight 2s ease-out;
+  }
+
+}
