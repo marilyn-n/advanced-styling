@@ -71,10 +71,28 @@ body {
     transform: skewY(2deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-third {
+  text-transform: uppercase;
+  color: #777;
+  font-size: .95rem; }
+
+.paragraph {
+  line-height: 1.888;
+  font-size: .875rem;
+  text-align: left; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1.875rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-mb-8 {
+.u-mb-sm {
+  margin-bottom: 1rem; }
+
+.u-mb-md {
+  margin-bottom: 4rem; }
+
+.u-mb-lg {
   margin-bottom: 8rem; }
 
 .btn {
@@ -114,6 +132,22 @@ body {
   .btn--animated {
     animation: moveInBotton .5s ease-out .75s;
     animation-fill-mode: backwards; }
+  .btn--learn-more {
+    text-decoration: none;
+    color: #55c57a;
+    padding: .5rem .25rem;
+    border-bottom: 1px solid #55c57a;
+    transition: all .2s; }
+    .btn--learn-more:hover {
+      background-color: #55c57a;
+      color: white;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px); }
+    .btn--learn-more:active {
+      background-color: #55c57a;
+      color: white;
+      box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(0); }
 
 .header {
   height: 95vh;

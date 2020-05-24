@@ -37,3 +37,18 @@
     text-shadow: .5rem 1rem 2rem rgba(black,.2);
   }
 }
+
+.heading-third {
+  text-transform: uppercase;
+  color: $color-gray-dark;
+  font-size: .95rem;
+}
+
+.paragraph {
+  line-height: 1.888;
+  font-size: .875rem;
+  text-align: left;
+  &:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
