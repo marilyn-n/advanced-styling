@@ -2,11 +2,11 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 20rem;
+  height: 25rem;
   &__side {
     width: 100%;
     background-color: red;
-    height: 20rem;
+    height: 25rem;
     transition: all .8s ease;
     color: white;
     position: absolute;
@@ -14,6 +14,7 @@
     left: 0;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(black, .15);
     &--front {
       background-color: white;
@@ -28,10 +29,61 @@
   }
   
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 10rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background: url(../../img/nat-1.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    width: 75%;
+  }
+
+  &__heading--span {
+    padding: .5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-secondary-light, .85), 
+      rgba($color-secondary-dark, .85));
+    }
+  }
+
+  &__details {
+    padding-top: 2rem;
+    color: #777;
+    font-size: .875rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      li {
+        padding: .5rem 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-light-gray;
+        }
+      }
+    }
   }
 }
