@@ -23,7 +23,20 @@
     &--back {
       transform: rotateY(180deg);
       &--1 {
-        background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8));
+        background-image: linear-gradient(to right bottom, 
+          rgba($color-secondary-light, .8), 
+          rgba($color-secondary-dark, .8));
+      }
+
+      &--2 {
+        background-image: linear-gradient(to right bottom, 
+          $color-primary, $color-primary-light);
+      }
+
+      &--3 {
+        background-image: linear-gradient(to right bottom, 
+          rgba($color-third-light, .8), 
+          rgba($color-third-dark, .8));
       }
     }
   }
@@ -41,8 +54,16 @@
     height: 10rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     &--1 {
       background: url(../../img/nat-1.jpg);
+    }
+    &--2 {
+      background: url(../../img/nat-2.jpg);
+    }
+    &--3 {
+      background: url(../../img/nat-3.jpg);
     }
   }
 
@@ -67,6 +88,18 @@
       rgba($color-secondary-light, .85), 
       rgba($color-secondary-dark, .85));
     }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-primary, .85), 
+      rgba($color-primary-light, .85));
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-third-light, .85), 
+      rgba($color-third-dark, .85));
+    }
   }
 
   &__details {
@@ -85,5 +118,30 @@
         }
       }
     }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  &__price-only {
+    font-size: .875rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 2.5rem;
+    font-weight: 100;
   }
 }
