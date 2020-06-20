@@ -25,6 +25,12 @@
           text-transform: uppercase;
           color: $color-gray-dark-2;
           text-decoration: none;
+          &:hover, 
+          &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba(black, .4);
+            transform:scale(1.3);
+          }
         }
       }
     }
