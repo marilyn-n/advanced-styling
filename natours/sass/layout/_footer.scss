@@ -1,0 +1,40 @@
+.footer {
+  background: $color-gray-dark-3;
+  padding: 2rem 6rem;
+  @include clearfix;
+  &__logo {
+    width: 6rem;
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  
+  &__navigation {
+    width: 45%;
+    display: inline-block;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(white, 0.2);
+    ul {
+      text-align: center;
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: .5rem;
+        a {
+          font-size: .875rem;
+          text-transform: uppercase;
+          color: $color-gray-dark-2;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__meta {
+    padding: 1rem 0;
+    border-top: 1px solid rgba(white, 0.2);
+    color: $color-gray-dark-2;
+    width: 45%;
+    float: right;
+  }
+}
