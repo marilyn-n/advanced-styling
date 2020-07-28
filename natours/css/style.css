@@ -1,15 +1,31 @@
+/*
+breakpoint choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-body {
+html {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.7;
   color: #777;
   padding: 0 1.875rem; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 @keyframes moveInLeft {
   0% {
