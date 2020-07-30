@@ -9,10 +9,20 @@
 
 .u-mb-md {
   margin-bottom: 4rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
+
 }
 
 .u-mb-lg {
   margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem !important;
+  }
+
 }
 
 .u-mt-md {
