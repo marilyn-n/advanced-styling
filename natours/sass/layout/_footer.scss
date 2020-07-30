@@ -14,6 +14,12 @@
     display: inline-block;
     padding: 1rem 0;
     border-top: 1px solid rgba(white, 0.2);
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
+
     ul {
       text-align: center;
       list-style: none;
@@ -34,6 +40,7 @@
         }
       }
     }
+
   }
 
   &__meta {
@@ -42,5 +49,12 @@
     color: $color-gray-dark-2;
     width: 45%;
     float: right;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+
   }
 }
