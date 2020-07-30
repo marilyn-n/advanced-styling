@@ -9,9 +9,18 @@
   font-size: 1rem;
   transform: skewX(-12deg);
   position: relative;
+  @include respond(tab-port) { 
+    width: 100%;
+    transform: skewX(0) !important;
+  }
+
   & > * {
     transform: skewX(12deg);
+    @include respond(phone) { 
+      transform: skewX(0) !important;
+    }
   }
+
   &__shape {
     height: 9rem;
     width: 9rem;
@@ -22,6 +31,12 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1rem) skewX(12deg);
+    
+    @include respond(phone) { 
+      float: none;
+      transform: translateX(0) skewX(0);
+    }
+
   }
 
   &__image {
@@ -33,6 +48,10 @@
 
   &__text {
     transform: skewX(12deg);
+    @include respond(phone) { 
+      transform: skewX(12deg);
+      margin-top: 1rem;
+    }
   }
 
   &__caption {
