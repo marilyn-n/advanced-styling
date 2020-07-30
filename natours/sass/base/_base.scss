@@ -10,8 +10,7 @@ html {
   font-size: 16px;
   line-height: 1.7;
   color: $color-gray-dark;
-  padding: 0 1.875rem;
-
+  
   @include respond(tab-land) {
     font-size: 56.25%;        
   }
@@ -23,4 +22,14 @@ html {
   @include respond(big-desktop) {
     font-size: 75%;
   }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0 1.875rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  
 }
