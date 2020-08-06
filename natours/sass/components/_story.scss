@@ -31,10 +31,21 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1rem) skewX(12deg);
+    overflow: hidden;
+    border-radius: 50%;
     
     @include respond(phone) { 
       float: none;
       transform: translateX(0) skewX(0);
+    }
+
+    @supports (-webkit-clip-path: polygon(0 0) or (clip-path: polygon(0 0))) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      height: 9rem;
+      width: 9rem;
     }
 
   }
