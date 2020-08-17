@@ -6,6 +6,14 @@
   box-shadow: var(--shadow-dark);
 }
 
+.header {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: white;
+}
+
 .content {
   display: flex;
 }
