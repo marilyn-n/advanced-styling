@@ -42,7 +42,6 @@
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: white;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%;
@@ -51,7 +50,11 @@
 }
 
 .user-reviews {
-  background-color: white;
-  box-shadow: var(--shadow-light);
+  position: relative;
   flex: 1;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
