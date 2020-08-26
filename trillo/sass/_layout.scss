@@ -19,6 +19,11 @@
   align-items: center;
   background-color: white;
   border: var(--line);
+  @media only screen and (max-width: $bp-xs-small) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 .content {
@@ -49,6 +54,11 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
 }
 
 .description {
@@ -62,6 +72,11 @@
     padding: 2rem;
     margin-right: 3rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 0 0 3rem 0;
+  }
+
 }
 
 .user-reviews {

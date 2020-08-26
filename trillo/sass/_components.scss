@@ -8,6 +8,11 @@
   flex: 0 0 40%;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: $bp-xs-small) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 
   &__input {
     font-family: inherit;
@@ -66,6 +71,9 @@
     height: 100%;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem;
+    }
   }
 
   & > *:hover {
@@ -165,6 +173,10 @@
 
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem;
+    }
   }
 
   &__link {
@@ -182,7 +194,12 @@
 
     @media only screen and (max-width: $bp-medium) {
       justify-content: center;
-      padding: 2rem;
+      padding: 0 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem;
+      flex-direction: column;
     }
 
   }
@@ -233,10 +250,14 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
-    // flex: 1;
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -264,22 +285,32 @@
     margin-left: 3rem;
     padding: 0 2.25rem;
     align-self: stretch;
-
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.25rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: .8rem;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-small) {
+      font-size: .5rem;
+    }
   }
 
   
