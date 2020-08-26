@@ -106,9 +106,15 @@
 // SIDE NAVIGATION  ************************************************************************
 .side-nav {
   list-style: none;
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+  }
 
   &__item {
     position: relative;
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
     &:hover {
       background-color: var(--color-primary-dark);
       transition: all .1s;
@@ -116,6 +122,9 @@
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
     }
   }
 
@@ -171,6 +180,10 @@
     align-self: stretch;
     height: 100%;
 
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
 
   }
 
@@ -188,6 +201,10 @@
   text-align: center;
   color: var(--color-grey-light-4);
   margin: 1rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 // GALERY ********************************************************************
@@ -205,6 +222,7 @@
 }
 
 .overview {
+  background-color: white;
   display: flex;
   align-self: center;
   border-bottom: var(--line);
@@ -364,6 +382,10 @@
   display: flex;
   align-items: center;
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -371,7 +393,7 @@
     border-radius: 50%;
     border: 3px solid white;
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 
@@ -388,6 +410,12 @@
   padding: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -433,7 +461,7 @@
   &::before {
     content: "\201C";
     position: absolute;
-    // top: -7.75rem;
+    top: 3rem;
     left: -.85rem;
     line-height: .45;
     font-size: 20rem;
@@ -447,6 +475,12 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+  background-color: white;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
+
   &__book-now {
     font-size: 1.2rem;
     font-weight: 300;
