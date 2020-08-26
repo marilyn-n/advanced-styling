@@ -334,11 +334,14 @@ body {
     width: 1.5rem;
     margin-right: .7rem;
     background-image: url(../img/chevron-thin-right.svg);
-    background-size: cover;
-    --webkit-mask-image: url(../img/chevron-thin-right.svg);
-    --webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover; }
+    background-size: cover; }
+    @supports (-webkit-mask-image: url()) or (-webkit-mask-image: url()) {
+      .list__item::before {
+        --webkit-mask-image: url(../img/chevron-thin-right.svg);
+        --webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        background-image: none; } }
 
 .recommend {
   font-size: 1.3rem;
