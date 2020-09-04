@@ -6,7 +6,26 @@
   }
 
   &__content {
+    padding: 6rem 8vw;
     background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+
+    /* flexbox solution to center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* grid solution to center 
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    */
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
