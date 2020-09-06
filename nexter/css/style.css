@@ -262,4 +262,29 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  text-align: center; }
+  .footer__item {
+    font-size: 1.2rem;
+    font-family: "Josefin Sans", sans-serif;
+    color: #f9f7f6;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    display: grid;
+    align-content: center;
+    transition: all .2s;
+    cursor: pointer; }
+    .footer__item:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px); }
+  .footer__copyright {
+    font-size: 1.2rem;
+    color: #aaa;
+    text-align: center;
+    grid-column: 1 / -1;
+    width: 20%;
+    margin: 0 auto; }
